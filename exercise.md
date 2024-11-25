@@ -2,7 +2,11 @@
 
 ## 课堂作业
 
+$S$为平面，$L$为如图所示的直线，$L=\{(\xi_1,\xi_2)^T|\xi_1+\xi_2=1\}$，是否有可能定义$L$中的加法和数量乘法，使得$L$成为$\mathbf{R}$上的线性空间？
 
+
+
+考虑单位圆周$L$，是否有可能定义$L$中的加法和数量乘法，使得$L$成为$\mathbf{R}$上的线性空间？
 
 
 
@@ -20,6 +24,38 @@
 
 ## 第一章作业
 
+### I
+
+I. 判断下述集合是否为线性空间：
+
+1. 在区间 $\alpha \leqslant \tau \leqslant \beta$ 上定义的可微实函数的全体。
+2. 在区间 $\alpha \leqslant \tau \leqslant \beta$ 上满足 $|f(\tau)| \leqslant M$ 的实值函数 $f(\tau)$ 的全体，其中 $M$ 为一正实数。
+3. $\mathrm{M} = \{ x \mid \xi_1 + \xi_2 = 0 \} \subset \mathbf{R}^n$.
+4. $\mathrm{M} = \{ x \mid 2\xi_1 + 3\xi_2 = 3 \} \subset \mathbf{C}^n$.
+5. $\mathrm{M} = \{ x \mid \dot{x} = Ax, \, A \in \mathbf{C}^{n \times n} \}$, $\dot{x} = \frac{dx}{d\tau}$.
+
+证$2^{\circ}$：
+$$
+\begin{aligned}
+&\text{集合 }S=\{f(\tau)\mid|f(\tau)|\leq M,\, \tau\in[a,b]\}\\
+&\text{考虑加法封闭性:设 }f(\tau)\in S, g(\tau)\in S.\\
+&|f(\tau)|\leq M, |g(\tau)|\leq M.\\
+&|f(\tau)+g(\tau)|\leq|f(\tau)|+|g(\tau)|\leq 2M. \\
+&\text{因此加法不封闭, }S\text{ 不是线性空间}.
+\end{aligned}
+$$
+证$5^{\circ}$：
+$$
+\begin{aligned}
+& M = \{x \mid \dot{x} = Ax, \, A \in \mathbf{C}^{n \times n}\}, \quad \dot{x} = \frac{dx}{dt}. \\
+& \text{考虑加法封闭性:} \quad x_1 \in M, \quad x_2 \in M \text{，则 } x_1 = Ax_1, \quad x_2 = Ax_2. \\
+& \frac{d(x_1 + x_2)}{dt} = \frac{dx_1}{dt} + \frac{dx_2}{dt} = Ax_1 + Ax_2 = A(x_1 + x_2), \text{满足加法封闭性}. \\
+& \text{考虑数乘封闭性:} \quad \frac{d(cx)}{dt} = c \frac{dx}{dt} = cAx = A(cx), \text{也满足数乘封闭性}. \\
+& \text{零向量: } 0 \text{ 满足 } 0 = A \cdot 0 = 0, \text{因此}0 \in M. \\
+& \text{综上 } M \text{ 是线性空间}.
+\end{aligned}
+$$
+
 ### III
 
 $1^\circ \quad \mathbf{U}_i \subset \mathbf{S},i \in \{1, 2\} \text{ 是 } \mathbf{S} \text{ 的真子空间，}
@@ -27,7 +63,26 @@ $1^\circ \quad \mathbf{U}_i \subset \mathbf{S},i \in \{1, 2\} \text{ 是 } \math
 
 证：
 $$
-待补充
+\begin{aligned}
+& 1^{\circ} \, U_{1} \subset U_{2}\text{ 或 } U_{2} \subset  U_{1}, \\
+& \text{则 } U_{1} \cup U_{2} = U_{1} \text{ 或 } U_{2} \subsetneqq S, \, \text{符合。} \\
+
+& 2^{\circ} \, U_{1} \not\subset U_{2} \text{ 且 } U_{2} \not\subset U_{1}, \\
+& \text{即存在 } a_1 \in U_1, \, a_1 \notin U_2, \, \text{且 } a_2 \in U_2, \, a_2 \notin U_1. \\
+& \text{由于 } a_1, a_2 \in S, \, \text{而 } S \text{ 为线性空间，} \\
+& \text{故 } a_1 + a_2 \in S. \\
+& \text{若能证明 } U_1 \cup U_2 \neq S, \text{也就能找到不属于} U_1\text{和}U_2的元素满足题目要求\\
+
+& \text{下面面使用反证法}\\
+& \text{设 } S = U_1 \cup U_2, \\
+& \text{则 } a_1 + a_2 \in U_1 \text{ 或 } U_2. \\
+& \text{若 } a_1 + a_2 \in U_1, \text{ 注意到 } a_1 \in U_1, \text{而 } U_1 \text{ 为 } S \text{ 的子空间，} \\
+& \text{故 } a_2 = (a_1 + a_2) + (-a_1) \in U_1, \text{ 矛盾。} \\
+& \text{若 } a_1 + a_2 \in U_2, \text{ 同理矛盾。} \\
+& \text{因此 } S \neq U_1 \cup U_2, \text{所以 } U_1 \cup U_2 \subsetneq S. \\
+& \text{由此可知，存在 } a \in S, \text{但 } a \notin U_1 \cup U_2.\\
+& \text{一种几何解释：S为平面，}U_1\text{和}U_2是横轴和纵轴
+\end{aligned}
 $$
 
 
