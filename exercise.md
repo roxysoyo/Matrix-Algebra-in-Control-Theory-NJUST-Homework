@@ -2,23 +2,12 @@
 
 ## 课堂作业
 
-$S$为平面，$L$为如图所示的直线，$L=\{(\xi_1,\xi_2)^T|\xi_1+\xi_2=1\}$，是否有可能定义$L$中的加法和数量乘法，使得$L$成为$\mathbf{R}$上的线性空间？
-
-
-
-考虑单位圆周$L$，是否有可能定义$L$中的加法和数量乘法，使得$L$成为$\mathbf{R}$上的线性空间？
-
-
-
-如何定义封闭曲线$L$的向量加法和数量乘法，使得$L$成为$\mathbf{R}$上的线性空间？若$L'$为有现成曲线段，又该如何定义向量加法和数量乘法呢？
-
-
-
-你是否认为真有“跳跌性思维”，即你面对一个正常人发现他的表述主题是随机跳跃的，相互之间没有规律可言。试用学过的的线性代数知识解释这一现象。
-
-
-
-
+1. $S$ 为平面，$L$ 为如图所示的直线，$L = \{(\xi_1, \xi_2)^T \mid \xi_1 + \xi_2 = 1\}$，是否有可能定义 $L$ 中的加法和数量乘法，使得 $L$ 成为 $\mathbf{R}$ 上的线性空间？
+2. 考虑单位圆周 $L$，是否有可能定义 $L$ 中的加法和数量乘法，使得 $L$ 成为 $\mathbf{R}$ 上的线性空间？
+3. 如何定义封闭曲线 $L$ 的向量加法和数量乘法，使得 $L$ 成为 $\mathbf{R}$ 上的线性空间？若 $L'$ 为有限曲线段，又该如何定义向量加法和数量乘法呢？
+4. 你是否认为真有“跳跌性思维”，即你面对一个正常人发现他的表述主题是随机跳跃的，相互之间没有规律可言？试用学过的线性代数知识解释这一现象。
+5. 试用学过的线性代数知识，建模解释“一鼓作气”。
+6. 
 
 
 
@@ -527,6 +516,87 @@ I_r & 0 \\
 
 \end{align*}
 $$
+
+
+
+### II
+
+证明下述结论：
+
+1° 任何 $A \in \mathbf{C}^{m \times n}, B \in \mathbf{C}^{n \times m}$，则$\begin{bmatrix}
+AB & 0 \\
+B & 0
+\end{bmatrix} 
+\sim 
+\begin{bmatrix}
+0 & 0 \\
+B & BA
+\end{bmatrix}$.
+
+2° 对任何 $A \in \mathbf{C}^{m \times n}, B \in \mathbf{C}^{n \times m}$，则 $AB$与 $BA$ 具相同的非零特征值.
+
+6° $A = aa^H \in \mathbf{C}^{n \times n}$的特征值是$0$与 $a^H a$.
+
+证$1^{\circ}$：
+$$
+\text{令} M=\begin{bmatrix}
+I_{m} & -A \\
+0 & I_{n}
+\end{bmatrix},\quad 
+
+M^{-1} = \begin{bmatrix}
+I_{m} & A \\
+0 & I_{n}
+\end{bmatrix}\\
+M\begin{bmatrix}
+AB & 0 \\
+B & 0
+\end{bmatrix}
+M^{-1}=\begin{bmatrix}
+0 & 0 \\
+B & 0
+\end{bmatrix}
+\begin{bmatrix}
+I_{m} & A \\
+0 & I_{n}
+\end{bmatrix}=
+\begin{bmatrix}
+0 & 0 \\
+B & BA
+\end{bmatrix}
+$$
+
+
+证$2^{\circ}$：
+$$
+假设 ( \lambda \neq 0 ) 是 AB 的一个非零特征值，且对应的特征向量为 x \in \mathbb{C}^m，
+即ABx = \lambda x.\\
+
+将x 的两边左乘 B，得到：
+B(ABx) = \lambda Bx.\\
+
+矩阵的结合律有：
+(BA)(Bx) = \lambda (Bx).\\
+令 y = Bx 。如果 y \neq 0 ，则上式说明  \lambda  也是 BA  的特征值。\\
+反之，如果\mu \neq 0 是  BA 的一个非零特征值且对应特征向量为 y \in \mathbb{C}^n ，则BAy = \mu y.\\
+将 y 的两边左乘 A ，得到：A(BAy) = \mu Ay.\\
+同样，矩阵的结合律成立：(AB)(Ay) = \mu (Ay).\\
+令 z = Ay。如果z \neq 0，则上式说明\mu也是 AB 的特征值。\\
+$$
+
+
+证$6^{\circ}$：
+$$
+\text{由} 2^{\circ} \text{直接得}\\
+\text{令} A=a,\,B=a^H,\,a^Ha\text{为标量},\,\text{特征值为}a^Ha.
+$$
+
+
+## 第四章作业
+
+### I
+
+
 
 
 
