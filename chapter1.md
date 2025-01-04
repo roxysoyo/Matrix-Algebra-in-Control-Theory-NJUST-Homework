@@ -16,11 +16,10 @@
 
 #### 证明 5°
 \( M = \{ x \mid \dot{x} = Ax, \, A \in \mathbf{C}^{n \times n} \}, \quad \dot{x} = \dfrac{dx}{dt} \)。  
-考虑加法封闭性：\( x_1 \in M, \, x_2 \in M \)，则 \( x_1 = Ax_1, \, x_2 = Ax_2 \)。  
+考虑加法封闭性：\( x_1 \in M, \, x_2 \in M \)，则 \( \dot{x_1} = Ax_1, \, \dot{x_2} = Ax_2 \)。
 \(
 \dfrac{d(x_1 + x_2)}{dt} = \dfrac{dx_1}{dt} + \dfrac{dx_2}{dt} = Ax_1 + Ax_2 = A(x_1 + x_2),
 \)满足加法封闭性。  
-
 考虑数乘封闭性：  
 \(
 \dfrac{d(cx)}{dt} = c \dfrac{dx}{dt} = cAx = A(cx),
@@ -155,10 +154,10 @@ B_2
 2. 几何法  
 \( \operatorname{rank}(A) = 1, \) 即 \( A = [a_1 \ldots a_n], \, a_i \in \mathbf{C}^n, 1 \le i \le n \)  
 \( \dim \mathbf{R}(A) = 1, \) 即 \( a_k \) 为 \( \mathbf{R}(A) \) 的一组基,  
-不妨设 \( k = 1, \) 即有 \( \alpha_i \) 使得 \( a_i = \alpha_i \cdot a_1, i=2, \cdots,n \)  
-故 \( A = [a_1\quad \alpha_1 \cdot a_1 \, \ldots \, \alpha_n\cdot a_1], \)  
-\( = a_1 \begin{pmatrix} 1 & \alpha_1 & \cdots & \alpha_n \end{pmatrix}, \)  
-令 \( a = a_1, \, b^T = (1, \alpha_1, \cdots, \alpha_n), \) 显然 \( a \neq 0 \)（基向量不为0），\( b \neq 0, \quad \) 证毕.
+不妨设 \( k = 1, \) 即有 \( \alpha_i \) 使得 \( a_i = \alpha_i \cdot a_1, i=1, \cdots,n-1 \)  
+故 \( A = [a_1\quad \alpha_1 \cdot a_1 \, \ldots \, \alpha_{n-1}\cdot a_1], \)  
+\( = a_1 \begin{pmatrix} 1 & \alpha_1 & \cdots & \alpha_{n-1} \end{pmatrix}, \)  
+令 \( a = a_1, \, b^T = (1, \alpha_1, \cdots, \alpha_{n-1}), \) 显然 \( a \neq 0 \)（基向量不为0），\( b \neq 0, \quad \) 证毕.
 
 
 
@@ -174,7 +173,7 @@ B_2
 ---
 
 ### V 证明下述结论
-1° \( A \in \mathbf{C}^{m \times n} \), 则有 \( \mathbf{R}(A) = \mathbf{R}(AA^H), \quad \mathbf{N}(A) = \mathbf{N}(A^H A). \)  
+1° \( A \in \mathbf{C}^{m \times n} \), 则有 \( \mathbf{R}(A) = \mathbf{R}(AA^H), \, \mathbf{N}(A) = \mathbf{N}(A^H A). \)  
 
 2° \( A \in \mathbf{C}^{m \times n} \), 则 \( A^H A \text{ 可逆当且仅当 } \operatorname{rank}(A) = n, \, AA^H \text{ 可逆当且仅当 } \operatorname{rank}(A) = m. \)  
 
@@ -193,10 +192,10 @@ B_2
 \(\forall x \in \mathbf{N}(A^H A), \, \text{有 } A^H A x = 0,\)  
 \(\Rightarrow x^H A^H A x = 0, \, \text{则 } (Ax)^H (Ax) = 0,\)  
 \(\Rightarrow Ax = 0 \, \Rightarrow x \in \mathbf{N}(A),\)  
-从而 \(\mathbf{N}(A^H A) \subseteq \mathbf{N}(A),\) 因此 \(\mathbf{N}(A) = \mathbf{N}(A^H A),\) (3)  
+从而 \(\mathbf{N}(A^H A) \subseteq \mathbf{N}(A),\) 因此 \(\mathbf{N}(A) = \mathbf{N}(A^H A),\mathbf{N}(A^H) = \mathbf{N}(A A^H),\) (3)  
 
 对于 (1)，维数更容易证明。  
-有 \(\dim \mathbf{R}(A^H A) = n - \dim \mathbf{N}(A A^H)\)  
+有 \(\dim \mathbf{R}(A A^H) = n - \dim \mathbf{N}(A A^H)\)  
 \(= n - \dim \mathbf{N}(A^H), \quad \text{由 (3) 得到}\)  
 \(= \dim \mathbf{R}(A^H) = \operatorname{rank}(A^H) = \operatorname{rank}(A) = \dim \mathbf{R}(A),\) (4)  
 于是 \(\mathbf{R}(AA^H) = \mathbf{R}(A).\) 由 (1)(4) 得到
@@ -211,11 +210,10 @@ B_2
 #### 证明 3°
 \(\operatorname{rank}(AB) = \dim(\mathbf{R}(AB))\)  
 \(= \dim(A \cdot \mathbf{R}(B))\)  
-令 \(V = \mathbf{R}(B)\)，根据定理 1.8.2 得证，见书上 \(P_{26}\)。  
+令 \(Q = \mathbf{R}(B)\)，根据定理 1.8.2 得证，见书上 \(P_{26}\)。  
 
 #### 定理 1.8.2
 \(\sigma, \mathbf{S}, \mathbf{T}, \mathbf{Q}, \mathbf{U}\) 如定义 1.8.2，则：  
-
 1° \(\dim[\sigma(\mathbf{Q})] = \dim(\mathbf{Q}) - \dim[\mathbf{Q} \cap \mathrm{Ker}(\sigma)]\),  
 2° \(\dim[\sigma^{-1}(\mathbf{U})] = \dim[\mathrm{Ker}(\sigma)] + \dim[\mathbf{U} \cap \mathrm{Im}(\sigma)]\),  
 3° \(\dim(\mathbf{S}) = \dim[\mathrm{Ker}(\sigma)] + \dim[\mathrm{Im}(\sigma)]\).  
@@ -223,7 +221,7 @@ B_2
 #### 证明 4°
 \(A^2 = I_n \Rightarrow A^2 = I_n^2,\)  
 \(\Rightarrow (A + I_n)(A - I_n) = 0,\)  
-\(r(A + I_n) + r(A - I_n) \leq n \, (\text{由 IV 4 知}).\)  
+\(\operatorname{rank}(A + I_n) + \operatorname{rank}(A - I_n) \leq n \, (\text{由 IV 4 知}).\)  
 下证反方向：
 \(n = \operatorname{rank}(2I_n),\)  
 \(= \operatorname{rank}[(A + I_n) + (-A + I_n)],\)  
@@ -236,17 +234,13 @@ B_2
 
 例1  \(
 \operatorname{rank}(A|B) \leq \operatorname{rank}(A) + \operatorname{rank}(B)\) 
-
 例2 \(
 \operatorname{rank}(AB) \leq \min\{\operatorname{rank}(A), \operatorname{rank}(B)\}\) 
-
 
 #### 证明 例1
 \((A \mid B) = (A \mid O) + (O \mid B)\)，  
 因此 \(\operatorname{rank}(A \mid B) \leq \operatorname{rank}(A) + \operatorname{rank}(B)\)。  证毕。
 
 #### 证明 例2
-\(\mathbf{R}(AB) \subseteq \mathbf{R}(A)\)，\(\mathbf{R}(B^T A^T) \subseteq \mathbf{R}(B^T)\)，  
-因此，\(\operatorname{rank}(AB) = \dim \mathbf{R}(AB) \leq \dim \mathbf{R}(A) = \operatorname{rank}(A)\)，  
-\(\operatorname{rank}(AB) = \operatorname{rank}((AB)^T) = \operatorname{rank}(B^T A^T) \leq \dim \mathbf{R}(B^T) = \operatorname{rank}(B)\)。
+书P36 定理1.11.6
 
