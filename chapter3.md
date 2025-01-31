@@ -103,7 +103,7 @@ x_i, & 1 \leq i \leq r, \\
 
 对于任意Jordan块 \( J_i \)，如果它大小大于1，即包含上三角的1，则：\[ J_i^2 \neq J_i \]这说明所有Jordan块必须是1×1的，即J是对角矩阵
 
-由于特征值只能是0或1，所以J的形式必然是：\[ J = \begin{bmatrix} I_r & 0 \\ 0 & 0 \end{bmatrix} \]其中r是特征值1的个数
+由于特征值只能是0或1，所以J的形式必然是：\( J = \begin{bmatrix} I_r & 0 \\ 0 & 0 \end{bmatrix} \)其中r是特征值1的个数
 \( \mathrm{rank}(A) = \mathrm{rank}(PJP^{-1}) = \mathrm{rank}(J) = r \)
 取 \( X = P \)，则：\[ X^{-1}AX = P^{-1}(PJP^{-1})P = J = \begin{bmatrix} I_r & 0 \\ 0 & 0 \end{bmatrix} \]
 
